@@ -31,6 +31,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 root: /
 permalink: /:title/
 external-url-indicator: " »"
+destination: docs/
 
 # Build settings
 markdown: kramdown
