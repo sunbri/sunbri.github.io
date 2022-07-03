@@ -305,6 +305,15 @@
     }
 }
 
+.post .post-content hr+p:first-letter{
+    font-size: 65px;
+    padding-top: 15px;
+    float: left;
+    font-family: Georgia;
+    line-height: 30px;
+    padding-right: 4px;
+}
+
 .post-content {
     clear: left;
     margin: $spacing-unit;
@@ -346,19 +355,19 @@
 
     h2 {
         font-size: $font-size-large;
-        font-style: italic;
+        // font-style: italic;
 
         @include media-query-small-screen() {
             font-size: $font-size-medium + 2px;
         }
 
-        margin: 2em 0 0.4em 0em;
+        margin: 0em 0 0.3em 0em;
     }
 
     h3 {
         font-size: 1.0em;
-        font-style: italic;
-        font-weight: normal;
+        font-style: normal;
+        font-weight: bold;
 
         @include media-query-small-screen() {
             font-size: $font-size-medium;
@@ -385,7 +394,7 @@ blockquote {
     padding-top: $spacing-unit / 3;
     padding-bottom: $spacing-unit / 3;
     margin-bottom: $spacing-unit;
-    font-style: italic;
+    font-style: normal;
 
     code {
         font-size: 0.8em
@@ -398,8 +407,8 @@ blockquote {
 
 
 .callout {
-    border: 2px solid $color-textunderline;
-    padding: 1em;
+    border: 2px solid #000000;
+    padding: 0em;
     margin-bottom: $spacing-unit;
     text-align: center;
 }
@@ -418,8 +427,12 @@ ul.callout {
     border-left: 1px solid $color-textunderline;
 
     color: $color-textunderline;
-    font-style: italic;
     font-size: 0.8em;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .sidenote-hover {

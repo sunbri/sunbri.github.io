@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<!DOCTYPE html>
 <section class="post">
 
     <header class="post-header">
@@ -8,7 +9,7 @@ layout: default
             {% if page.external_url %}
             <a href="{{ page.external_url }}" class='article-link'>{{ page.title }}{{ site.external-url-indicator }}</a>
             {% else %}
-            {{ page.title }}
+            {{ page.title | markdownify }}
             {% endif %}
             {% if page.draft %} <span class="draft">Draft</span> {% endif %}
         </h1>

@@ -55,10 +55,10 @@
         }
         //endregion
 
-        const $fnItems = $footnotes.find("ol li");
+        const $fnItems = $footnotes.find("ol li p");
 
         $("sup").each(function(index) {
-            const $footnoteText = $fnItems.eq(index).text().trim();
+            const $footnoteText = $fnItems.eq(index).html().trim();
             createSideNote($(this), $footnoteText, startPosition);
         });
 
@@ -71,7 +71,7 @@
 
         // construct side note <div>
         let div = $(document.createElement('div'))
-            .text(footnoteText)
+            .html(footnoteText)
             .addClass("sidenote");
 
         const topPosition = superscript.offset();
