@@ -1,1 +1,1 @@
-Sitemap: sunbri.github.io/sitemap.xml
+Sitemap: https://sunbri.github.io/sitemap.xml
