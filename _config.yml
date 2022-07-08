@@ -26,8 +26,8 @@ author:
   name: "Brian Sun"
 description: >- # this means to ignore newlines until "baseurl:"
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: / # the subpath of your site, e.g. /blog
+url: "sunbri.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 root: /
 permalink: /:title/
 external-url-indicator: " »"
@@ -39,9 +39,10 @@ highlighter: rouge
 encoding: utf-8
 
 # Jekyll Plugins (only needed for GitHub Pages)
-#plugins:
-#  - jekyll-feed
-#  - jekyll-seo-tag
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # front matter defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
