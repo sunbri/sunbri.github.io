@@ -15,7 +15,7 @@ title: Categories
         <li class="post-link">
             <a class="post-link-url" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</a>
             {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}">{{ site.external-url-indicator }}</a>{% endif %}
-            <p class="post-link-date">{{ post.date | date: "%m/%-d" }}</p>
+            <p class="post-link-date">{{ post.date | date: "%m/%d/%y" }}</p>
         </li>
         {% endfor %}
     </ul>
