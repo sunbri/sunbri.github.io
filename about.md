@@ -13,10 +13,14 @@ Swartz's weblog][swartz], which I find quite pleasing to the eye.
 <p style="text-align: center;">contact me about anything: <span style="color: grey; font-style: italic">briansun68 [at] gmail [dot] com</span></p>
 
 Here are some links:
+- [goodreads][goodreads]
 - [Letterboxd][Letterboxd]
+- [RYM][RYM]
 
 [pages]:  https://pages.github.com
 [jekyll]: https://jekyllrb.com
 [henry]:  https://github.com/kaushikgopal/henry-jekyll/blob/main/README.md#henry-in-the-wild
 [swartz]:  http://www.aaronsw.com/weblog/
+[goodreads]: https://www.goodreads.com/brian_sun
 [Letterboxd]: https://letterboxd.com/bsun/
+[RYM]: https://rateyourmusic.com/~bsun
