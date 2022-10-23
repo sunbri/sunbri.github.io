@@ -1,4 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="https://sunbri.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunbri.github.io/" rel="alternate" type="text/html" /><updated>2022-07-10T20:55:38-04:00</updated><id>https://sunbri.github.io/feed.xml</id><title type="html">Brian Sun</title><subtitle></subtitle><author><name>Brian Sun</name></author><entry><title type="html">The End of Childhood</title><link href="https://sunbri.github.io/childhood/" rel="alternate" type="text/html" title="The End of Childhood" /><published>2022-07-08T00:00:00-04:00</published><updated>2022-07-08T00:00:00-04:00</updated><id>https://sunbri.github.io/childhood</id><content type="html" xml:base="https://sunbri.github.io/childhood/">&lt;p&gt;&lt;em&gt;This essay is based on my own, personal experiences, written amid a rush of nostalgia. There were moments in our childhoods that I’m sure everyone has had, when things were not looking so great, and we fell into the caress of the abyss. I’m not going to talk about any of that in here, for better or for worse.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-10-23T16:27:47-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Brian Sun</title><subtitle></subtitle><author><name>Brian Sun</name></author><entry><title type="html">A Nine Inning Saga: Baseball Savant’s Pitch Type Guessing Game</title><link href="http://0.0.0.0:4000/savant-pitching-game/" rel="alternate" type="text/html" title="A Nine Inning Saga: Baseball Savant’s Pitch Type Guessing Game" /><published>2022-10-22T00:00:00-04:00</published><updated>2022-10-22T00:00:00-04:00</updated><id>http://0.0.0.0:4000/savant-pitching-game</id><content type="html" xml:base="http://0.0.0.0:4000/savant-pitching-game/">&lt;h1 id=&quot;1&quot;&gt;1&lt;/h1&gt;
+&lt;p&gt;To the nonexistent readers of this blog, let me begin by apologizing for the dearth of activity these past three months. I’ve had to move cities, settle into a new apartment, and begin a new, terribly uninspiring job. But that’s a topic for another day.&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; We’re here today to discuss baseball, or more precisely, an online game derived from the game of baseball. And some data science, too. And perhaps a congeries of other random things. This is a post that has idled on the assembly line for over two and a half months, so it’s about time I present the finished product. Let’s begin.&lt;/p&gt;
+
+&lt;p&gt;On an ordinary mid-July evening, I was lifelessly snooping around &lt;a href=&quot;baseballsavant.mlb.com&quot;&gt;Baseball Savant&lt;/a&gt; after a relatively anemic performance by my beloved Cleveland Guardians: for the second night in a row, they had failed to score a single earned run against the pathetically mediocre Chicago White Sox.&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Then came the epochal event. Hovering my cursor over the 3x3 grid of tiny black squares at the top right corner of the page, a menu popped up, and my gaze instantly fixed on the seductive “Savant Games” link. As I moved to click it, my mind raked up old memories of high-school me playing the notoriously difficult &lt;a href=&quot;https://www.disney--games.com/winnie_the_pooh_s_home_run_derby_338.html&quot;&gt;Winnie the Pooh’s Home Run Derby&lt;/a&gt;.&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Looking back now, this flash of remembrance was a most befitting portent of what was to come. I launched the first game on the list, the seemingly innocuous Pitch Type Guessing Game. Little did I know, this wily, infernal PTGG would induce levels of rage and vexation that can only be matched by watching the Cleveland Browns inventing new ways to snatch defeat from the jaws of victory.&lt;/p&gt;
+
+&lt;h1 id=&quot;2&quot;&gt;2&lt;/h1&gt;
+&lt;p&gt;Here’s a screenshot of the game. It’s quite simple:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/assets/img/posts/PTGG.png&quot; alt=&quot;PTGG&quot; class=&quot;callout&quot; /&gt;
+&lt;figcaption&gt;If you&apos;re wondering, this was a changeup.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;On the left there’s a pitch gif (say this ten times fast) that will keep looping itself into eternity until a guess is entered; there’s no timer or anything. On the right are the seven choices. Apologies to eephus fans in advance. The game shows twenty pitches total, and your score is just the number, or percentage, of pitches you correctly identify.&lt;/p&gt;
+
+&lt;p&gt;If you have a few hours to kill, you can play the game at this &lt;a href=&quot;https://baseballsavant.mlb.com/games/pitch-type-guess&quot;&gt;link&lt;/a&gt;. Disclaimer: if you’re a binge-watching, achievement-grabbing neurotic like myself, proceed at your own risk. Oh yeah, throughout this post I may or may not abbreviate some pitch types with their two letter shorthand, so here’s a &lt;a href=&quot;https://www.mlb.com/glossary/pitch-types&quot;&gt;dictionary&lt;/a&gt; just in case.&lt;/p&gt;
+
+&lt;h1 id=&quot;3&quot;&gt;3&lt;/h1&gt;
+&lt;p&gt;I’ll be honest—before I discovered this game I mainly just thought of pitches as fastballs, sliders, and curveballs. I knew that sinkers, cutters, and splitters existed, but I never felt the need to look into their peculiarities as they all just looked fastball-esque to me. I didn’t have the foresight to jot down my score the first time I played the game, but if I had to guess it lied somewhere around 35%.&lt;/p&gt;
+
+&lt;p&gt;Having failed the practice test, I tossed some searches into Google and rummaged through a potpourri of videos, articles, blogs, and random websites run by random high school baseball coaches (which were honestly quite helpful) to hone my pitch discernment skills. Here’s a well-made &lt;a href=&quot;https://www.youtube.com/watch?v=1FTFWzcgjHE&quot;&gt;video&lt;/a&gt; on YouTube that I found pretty useful.  And for the sake of completeness, here’s a nice &lt;a href=&quot;https://lokeshdhakar.com/baseball-pitches-illustrated/&quot;&gt;blog post&lt;/a&gt; I stumbled upon that depicts roughly what things look like from the catcher’s point of view.&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;In the middle of this learning process, something amusingly ironic occurred: what was unbelievably useless and in fact actively detrimental was the MLB website’s &lt;a href=&quot;https://www.mlb.com/news/identifying-pitch-types-a-fan-s-guide&quot;&gt;“Identifying pitch types: A fan’s guide.”&lt;/a&gt; Scroll down to the “Cutter” heading, and there’s a video of “Dodgers closer Kenley Jansen throwing a nasty one for a game-ending strikeout.” I literally watched the video like ten times, trying to cope with the ball’s vertical-diagonal break more characteristic of a slider. Then I realized that there was no Dodger in the video, the pitcher was not Kenley Jansen, and we were not at the end of the game. We were in the heart of the game. The pitcher was Jon Gray, and the video was from his tenure on the Rockies. Jon Gray doesn’t even throw a cutter. That pitch was a slider.&lt;/p&gt;
+
+&lt;p&gt;Scrolling through the rest of the article with an eye alert for trouble, I discovered that roughly half of the clips had literally nothing to do with their so-called descriptions. Perhaps a change in the backend caused the video IDs to get all scrambled up or something—who knows. What I do know is that readers who are not fully focused may leave the page more confused than they entered it. But I digress.&lt;/p&gt;
+
+&lt;h1 id=&quot;4&quot;&gt;4&lt;/h1&gt;
+&lt;p&gt;I want to take a brief moment to showcase two pitch gifs that are emblematic of how infuriating the PTGG can be. Due to how the videos are loaded or something the one’s shown below are slightly longer than the loop you’d see in the actual game, but whatever.&lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s the first:&lt;/p&gt;
+&lt;figure&gt;
+&lt;video controls=&quot;&quot; preload=&quot;none&quot; playsinline=&quot;&quot;&gt;
+&lt;source src=&quot;/assets/img/posts/CutawayFastball.webm&quot; type=&quot;video/webm&quot; /&gt;
+&lt;source src=&quot;/assets/img/posts/CutawayFastball.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;figcaption&gt;Bases loaded down 14 in the 5th inning, nice.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Honestly, this wasn’t Savant’s fault, it was the fault of the
+broadcasters. Guess they really wanted that replay. But really the only
+option here was to go off speed, so I guessed some type of fastball and
+was too absentminded to record whether or not I was right. When I’d be
+on a guessing streak and a clip like this popped up, I’d get really
+sad.&lt;/p&gt;
+
+&lt;p&gt;And the other:&lt;/p&gt;
+&lt;figure&gt;
+&lt;video controls=&quot;&quot; preload=&quot;none&quot; playsinline=&quot;&quot;&gt;
+&lt;source src=&quot;/assets/img/posts/Sidearm.webm&quot; type=&quot;video/webm&quot; /&gt;
+&lt;source src=&quot;/assets/img/posts/Sidearm.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;figcaption&gt;The COVID season, what a time.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;So we have a sidewinder here, and I have no idea how to read them.
+Based on release point most of their pitches barely have any vertical
+break at all (at least on the broadcast), so I’d usually just throw out
+a wild guess based on speed. In this case, it was 81 mph, and I saw the
+ball drop a little bit, so I vacillated between slider and curveball
+and ultimately pulled the trigger on slider. It was a fastball. I don’t
+have proof, but I’m not lying. It was classified as a fastball, and
+that really made me question everything I knew about the
+world.&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;5&quot;&gt;5&lt;/h1&gt;
+&lt;p&gt;For about two days, I sat lifeless, slouched in my chair, guessing at pitch types over and over and over again. Sinker, slider, and sinker again. Every once in a while I’d record my stats, which yielded just over eighteen games of data when it was all said and done.&lt;/p&gt;
+
+&lt;p&gt;Before I disclose my mediocre results, let me mention that an encyclopedic knowledge of exactly what pitches every pitcher throws, what range of speeds they throw it at, and so on, would have been a massive boon to me. I did not (and still do not) possess such knowledge off the top of my head, and the chivalric part of my soul felt that I would besmirch my honor if I pulled up each pitcher’s Savant profile before guessing. With that being said, here are my percentages:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/img/posts/PTGG_Percentages.png&quot; alt=&quot;PTGG Percentages&quot; class=&quot;callout&quot; /&gt;
+&lt;figcaption&gt;Yes, this is a prebuilt theme from Excel.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It doesn’t look like I improved at all over the course of the experiment, which, if my memory doesn’t fail me, is congruent with how I felt during those two days. Though to be fair to myself, I did achieve results of 90% and 95% a few times–it just so happened that I didn’t record them.&lt;sup id=&quot;fnref:7&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s check my platoon splits. I batted .600 against lefties and .637 against righties, which honestly surprised me quite a bit. The oblique camera angle typical of baseball broadcasts made it much easier to identify movement from right-handed pitchers. In many cases I could never distinguish between a four-seamer and a sinker when it came a southpaw, as it was basically impossible to see how much run a pitch had relative to its release point.&lt;/p&gt;
+
+&lt;p&gt;Here’s an example. T.J. McFarland, leftie, pitching for the Athletics in 2020:&lt;/p&gt;
+&lt;figure&gt;
+&lt;video controls=&quot;&quot; preload=&quot;none&quot; playsinline=&quot;&quot;&gt;
+&lt;source src=&quot;/assets/img/posts/McFarland.webm&quot; type=&quot;video/webm&quot; /&gt;
+&lt;source src=&quot;/assets/img/posts/McFarland.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;figcaption&gt;For some reason I recorded this using QuickTime instead of downloading the video like I usually did.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;At first glance, the trajectory looks slider-like. But it’s simply too fast, and I’ve never heard of McFarland, so if I have to guess he’s probably no Gerrit Cole or Emmanuel Clasé. So it’s either a four-seamer or a sinker. Which one is it? I literally have no idea. Maybe you guess sinker because it sinks, but every ball sinks on its way to the plate. Maybe you can look at the color of the ball to determine the spin, or something. I guessed sinker, it happened to be a sinker, but I was far from confident in my choice.&lt;/p&gt;
+
+&lt;h1 id=&quot;6&quot;&gt;6.&lt;/h1&gt;
+&lt;p&gt;The pairs of pitches I was most likely to confuse for each other were FF &amp;amp; SI and SL &amp;amp; CU. Apropos of the first pair, there are some cases where it’s quite easy to identify a sinker. For example, take the following pitch by Jonathan Hernandez:&lt;/p&gt;
+
+&lt;p&gt;There’s that unmistakable torsion in its movement that will basically never exist for a four-seamer. Other times though, depending on the whims of the camera angle, I found it borderline impossible to distinguish between the two fastballs.&lt;/p&gt;
+
+&lt;p&gt;I’d say I’m noticeably better at maneuvering the SL &amp;amp; CU mix-up. In fact, to get an impression of my classification skills, we can form the confusion matrices for FF &amp;amp; SI and SL &amp;amp; CU.&lt;sup id=&quot;fnref:8&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/img/posts/Confusion.png&quot; alt=&quot;Confusion matrices&quot; class=&quot;callout&quot; /&gt;
+&lt;figcaption&gt;Couldn&apos;t quite figure out how to format the table in markdown.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Honestly not that great. If the gamed showed sinker, I’d guess four-seamer about 45% of the time. Perhaps I’m relying too much on the twisting motion of the baseball to identify sinkers, when in reality many of them may only exhibit a far more muted version of it. For real curveballs I’d be wrong almost 30% of the time, which isn’t that great either. If I had to guess this is probably a product of how my mental image of a “mean curve” is Clayton Kershaw’s, and his curveball has had consistently more vertical break than the average. At least I had good and acceptable performances for the four-seamer and slider respectively, which I’ll take as a win.&lt;/p&gt;
+
+&lt;h1 id=&quot;7&quot;&gt;7&lt;/h1&gt;
+&lt;p&gt;After a day of spamming the game over and over again, I nurtured a dubious hunch that ultimately grew into a full-on suspicion: there was simply no chance the distribution of pitches I encountered in the PTGG tallied with the true distribution of pitches in the MLB. I felt that at the very least there was an overabundance of sinkers and an insufficiency of cutters. And maybe an undersupply of changeups as well.&lt;/p&gt;
+
+&lt;p&gt;My hypothesis was backed up by the data. Using statistics gleaned from &lt;a href=&quot;https://www.pitcherlist.com&quot;&gt;Pitcher List&lt;/a&gt;, we can calculate the distribution of pitch types from this season.&lt;sup id=&quot;fnref:9&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;  Here’s the table, labeled with that two-letter shorthand I alluded to earlier:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/img/posts/PitchList.png&quot; alt=&quot;Confusion matrices&quot; class=&quot;callout&quot; /&gt;
+&lt;figcaption&gt;That&apos;s actually way more pitches than I expected.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The “UN” label stands for “Unknown.” Given that they make up a meager 0.05% of all pitches thrown, for the sake of simplicity (and at the expense of statistical integrity) I’m going to continue my analysis pretending they don’t exist, as the PTGG is never gonna hit me with one of them. But I would be curious to see a video of one of these pitches—are they made up of wild, feral pitches, strange grips, or something else?&lt;/p&gt;
+
+&lt;p&gt;So splitters are diamonds, sinkers are gold, curveballs and changeups are silver, cutters and sliders are bronze, and the old reliable four-seam fastball is iron or some other abundant metal. Looking at this data, I can tell you right off the bat&lt;sup id=&quot;fnref:10&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt; that the pitches thrown in the PTGG do not reflect these percentages at all. Here’s the distribution I got from the approximately 18 games that I took notes for:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/img/posts/PTGGDist.png&quot; alt=&quot;Confusion matrices&quot; class=&quot;callout&quot; /&gt;
+&lt;figcaption&gt;The fact that I didn&apos;t get a single splitter is pretty
+impressive.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;These two distributions are worlds part and the specifics of how they differ are pretty much in line with what my intuition told me.&lt;sup id=&quot;fnref:11&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; We can run a basic &lt;a href=&quot;https://en.wikipedia.org/wiki/Chi-squared_test&quot;&gt;chi-squared test&lt;/a&gt; to quantify this gap. The resulting p-value is 5.18 * 10e-35. That’s a lot of significance.&lt;/p&gt;
+
+&lt;p&gt;Now we can observe the nefarious PTGG designers at work. We already talked about how the hardest pitch I had trouble identifying correctly was the sinker: out of 76 sinkers seen, I mistakenly classified a whopping 34 of them as four-seam fastballs. And looking at the data, it seems like the PTGG has more than tripled the number of sinkers at the expense of savagely slashing the number of cutters, which are certainly easier to identify, given their usual slower speed and slight glove-side movement. Was this game purposely designed to make my life more miserable? I have no idea, but honestly this is as compelling evidence as there can be.&lt;/p&gt;
+
+&lt;h1 id=&quot;8&quot;&gt;8&lt;/h1&gt;
+&lt;p&gt;The fanatical, egotistical, and megalomaniacal parts of my brain (all three parts, in other words) could not endure the humiliation of still getting Bs and Cs and Fs on this exam despite retaking it at least a hundred times. “What if it’s Savant’s classification that’s wrong?,” I bargained.&lt;sup id=&quot;fnref:12&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt; Such thoughts goaded me into looking up how Savant even determines what these pitches are in the first place.&lt;/p&gt;
+
+&lt;p&gt;One of the first articles I stumbled upon was this &lt;a href=&quot;https://technology.mlblogs.com/mlb-pitch-classification-64a1e32ee079&quot;&gt;post&lt;/a&gt; from the MLB Technology Blog, which contained everything I wanted and then some. The innards of pitch classification are exactly what you’d expect. Lots and lots of data. Unsupervised learning. A neural network named PitchNet. Now, I’m not going to profess knowledge of whatever XGBoost is, but I think there are some things worth considering.&lt;/p&gt;
+
+&lt;p&gt;At a high level, there’s a dangerous pitfall that all machine learning algorithms must skirt in some way, and that’s the fact that they may be unwittingly eating their own tail. More precisely, the output of the algorithm may be influencing the environment it operates in, which influences its inputs (the training data), which in turn influences its output, which in turn … you get the idea. If this self-perpetuating cycle is left to spin around on its own, there may be perverse, potentially destructive outcomes, depending on the use case.&lt;/p&gt;
+
+&lt;p&gt;In the case of PitchNet, the question that springs to mind is the following: where does its training data come from? Theoretically it should consist of the myriad pitches thrown every night during baseball season, but those pitches are identified immediately by Statcast using … PitchNet. There must be some exogenous source of truth, and despite the aid of a clustering algorithm, what really matters is what the pitcher says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We classify each pitch in each pitcher’s repertoire as the pitcher himself calls it; for instance, a pitch that one pitcher calls a cutter may be called a slider by another, even if the velocity, spin, and movement of both pitches are essentially identical. Direct quotes from the pitchers themselves, as well as from pitching coaches, managers, and other on-field staff, are used to verify each pitcher’s repertoire along with images of the pitchers using different pitch grips.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So what’s a slider? Sure, it’s a breaking ball, faster than a curveball, slower than a fastball, and breaks glove-side. But at the end of the day, it seems that a slider is whatever a pitcher thinks is a slider. So now we have another reason why the PTGG can be so damn vexing.&lt;/p&gt;
+
+&lt;h1 id=&quot;9&quot;&gt;9&lt;/h1&gt;
+&lt;p&gt;After a couple days I came to accept my leaves-much-to-be-desired pitch classification skills. My eyes, it seemed, were simply not as keen as those of PitchNet. I resolved to vulgarize things: out with the four-seamer, two-seamer, sinker, slider, and curveball. Fastball and breaking ball were all I needed.&lt;/p&gt;
+
+&lt;p&gt;Well, maybe. I had one final dalliance with the old PTGG to scrape a few videos for this post, and something did happen:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/img/posts/100.png&quot; alt=&quot;100%&quot; class=&quot;callout&quot; /&gt;
+&lt;figcaption&gt;I don&apos;t remember how it happened exactly, but I probably
+got 15 four-seam fastballs or something.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A perfect game.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;If you’re one of my coworkers, please understand that you’re basically the only thing between me and madness. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;As I’m writing this, we just lost a tough five-game ALDS to the Yankees. We’ll be back next year. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;It’s basically impossible to beat Christopher Robin. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I think this guy is a UI designer; his blog is really cool. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;If none of the videos from here on out load, I apologize. Try another browser maybe. I was running into issues with Chrome that I had no idea how to fix. Aargh. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Turns out that the pitcher is &lt;a href=&quot;https://baseballsavant.mlb.com/savant-player/brian-moran-57238&quot;&gt;Brian Moran&lt;/a&gt;. He debuted in 2019, is 34 years old (probably what they’re talking about in the video), and in fact, throws an 82mph fastball. In 2020 he threw 110 pitches for a 9.26 ERA. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Don’t think I dipped below 35%, at least. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;You might protest that this analysis excludes the times when the pitch was FF and I guessed FC, for example. Two things to note: first, on fastballs I usually always guessed FF or SI, as FC rarely showed up in the game (this will be analyzed in the next section); second, SL and CU pitches usually have enough break that I would basically never guess anything else. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Okay, I lied. I actually did this calculation in late-July, when I first broke ground on this post—so there’s only about a half season’s worth of data. You might also object that the PTGG has pitches from as early as the 2020 season; to that I agree, but as we will soon see the discrepancy is so large that I am more than confident that expanding the dataset would yield little to no change. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Sorry. &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;You may wonder if Pitcher List has a classification method distinct from that of the MLB. I seriously doubt that’s the case, as the MLB has access to exclusive data captured directly at ballparks that no third party tool could even dream of having. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;This is some variant of that Seymour Skinner meme. &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Brian Sun</name></author><category term="baseball" /><summary type="html">1 To the nonexistent readers of this blog, let me begin by apologizing for the dearth of activity these past three months. I’ve had to move cities, settle into a new apartment, and begin a new, terribly uninspiring job. But that’s a topic for another day.1 We’re here today to discuss baseball, or more precisely, an online game derived from the game of baseball. And some data science, too. And perhaps a congeries of other random things. This is a post that has idled on the assembly line for over two and a half months, so it’s about time I present the finished product. Let’s begin. If you’re one of my coworkers, please understand that you’re basically the only thing between me and madness. &amp;#8617;</summary></entry><entry><title type="html">The End of Childhood</title><link href="http://0.0.0.0:4000/childhood/" rel="alternate" type="text/html" title="The End of Childhood" /><published>2022-07-08T00:00:00-04:00</published><updated>2022-07-08T00:00:00-04:00</updated><id>http://0.0.0.0:4000/childhood</id><content type="html" xml:base="http://0.0.0.0:4000/childhood/">&lt;p&gt;&lt;em&gt;This essay is based on my own, personal experiences, written amid a rush of nostalgia. There were moments in our childhoods that I’m sure everyone has had, when things were not looking so great, and we fell into the caress of the abyss. I’m not going to talk about any of that in here, for better or for worse.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;In a little over two weeks, I’m going to move into an apartment and start a full-time job. And with that, I know, will come the end of my childhood. For years I and countless other kids have been warned by the more hardened members of our species about this so-called “real world.” And for years it seemed like something that was forever distant, like that light at the end of a long tunnel—always a speck no matter how many steps you take in its direction. But before you know it, that speck will expand, and expand, and soon you’ll feel the sun mercilessly beating down on your head. Welcome to the real world.&lt;/p&gt;
 
@@ -16,7 +208,7 @@
 
 &lt;p&gt;There’s a constant strand that strings together those years of life from my very first memory to these last few weeks before my new job. I can’t quite place my finger on it, but I know it’s there, and I know it relates to a most essential question: what is childhood all about? I’m not looking for a scientific or an academic answer, naturally, but instead one that simply feels right, something that has to do with that idyllic coalescence of freedom, levity, and unadulterated joy. And honestly, I don’t think there’s anything better than saying that childhood, for me at least, is exactly what I have written above.&lt;/p&gt;
 
-&lt;p&gt;One of the classic clichés of the English language roughly goes as follows: “You don’t know what you have until it’s gone.” Like most clichés, though it’s overused, it still contains a kernel of truth. So perhaps I can’t really know what being a child is about right now, as I have yet to take that last step into the world of permanent adulthood. But when the time comes, I will reflect, and I will find out. For just like those brilliant, sublime constellations of the night sky, my childhood will always be there, unreachable, yet shining all the same.&lt;/p&gt;</content><author><name>Brian Sun</name></author><category term="reflections" /><summary type="html">This essay is based on my own, personal experiences, written amid a rush of nostalgia. There were moments in our childhoods that I’m sure everyone has had, when things were not looking so great, and we fell into the caress of the abyss. I’m not going to talk about any of that in here, for better or for worse.</summary></entry><entry><title type="html">Aristotle’s _Poetics_ and the Tragic Hero</title><link href="https://sunbri.github.io/aristotle-poetics/" rel="alternate" type="text/html" title="Aristotle’s _Poetics_ and the Tragic Hero" /><published>2022-07-02T00:00:00-04:00</published><updated>2022-07-02T00:00:00-04:00</updated><id>https://sunbri.github.io/aristotle-poetics</id><content type="html" xml:base="https://sunbri.github.io/aristotle-poetics/">&lt;figure&gt;
+&lt;p&gt;One of the classic clichés of the English language roughly goes as follows: “You don’t know what you have until it’s gone.” Like most clichés, though it’s overused, it still contains a kernel of truth. So perhaps I can’t really know what being a child is about right now, as I have yet to take that last step into the world of permanent adulthood. But when the time comes, I will reflect, and I will find out. For just like those brilliant, sublime constellations of the night sky, my childhood will always be there, unreachable, yet shining all the same.&lt;/p&gt;</content><author><name>Brian Sun</name></author><category term="reflections" /><summary type="html">This essay is based on my own, personal experiences, written amid a rush of nostalgia. There were moments in our childhoods that I’m sure everyone has had, when things were not looking so great, and we fell into the caress of the abyss. I’m not going to talk about any of that in here, for better or for worse.</summary></entry><entry><title type="html">Aristotle’s _Poetics_ and the Tragic Hero</title><link href="http://0.0.0.0:4000/aristotle-poetics/" rel="alternate" type="text/html" title="Aristotle’s _Poetics_ and the Tragic Hero" /><published>2022-07-02T00:00:00-04:00</published><updated>2022-07-02T00:00:00-04:00</updated><id>http://0.0.0.0:4000/aristotle-poetics</id><content type="html" xml:base="http://0.0.0.0:4000/aristotle-poetics/">&lt;figure&gt;
 &lt;img src=&quot;/assets/img/posts/Epidaurus.jpeg&quot; alt=&quot;Theater of Epidaurus&quot; class=&quot;callout&quot; /&gt;
 &lt;figcaption&gt;The Ancient Theater of Epidaurus. Look at those mountains.&lt;/figcaption&gt;
 &lt;/figure&gt;
