@@ -346,11 +346,13 @@
             font-size: $font-size-large;
         }
 
-        margin: 1.8em 0 0.8em 0em;
+        //margin: 1.8em 0 0.8em 0em;
+        margin: 0 0 0 0;
     }
 
     > h1:first-child {
-        margin-top: 1em;
+        // margin-top: 1em;
+        margin-top: 0em;
     }
 
     h2 {

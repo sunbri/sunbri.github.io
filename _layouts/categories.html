@@ -5,8 +5,18 @@ title: Categories
 ---
 
 <section class="post-index categories">
+
+    {% assign cats = '' | split: '' %}
+
     {% for category in site.categories %}
-    {% capture category_name %}{{ category | first }}{% endcapture %}
+        {% assign catName = category | first | split: ' ' %}
+        {% assign cats = cats | concat: catName %}
+    {% endfor %}
+
+    {% assign cats = cats | sort %}
+
+    {% for cat in cats %}
+    {% capture category_name %}{{ cat }}{% endcapture %}
 
     <h2 class="post-list-header post-list-category" id="{{ category_name }}">{{category_name}}</h2>
 
