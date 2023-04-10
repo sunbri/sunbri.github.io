@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Well You Really Went Bald There, Didn't You?"
-categories: comedy
+categories: culture
 ---
 
 I was watching Seinfeld one evening when I came across a scene so exquisitely funny that I at once rewound the episode a few minutes just to watch it again. It was as if my brain didn’t fully believe the sitcom perfection that had just transpired and demanded an encore for confirmation. And confirmed it was. Later that night, during those 5-120 minutes of pre-slumbrous phone use, I rewatched the scene at least ten more times, falling asleep to its piquant repartee echoing in my brain case like the melody of a catchy new song.

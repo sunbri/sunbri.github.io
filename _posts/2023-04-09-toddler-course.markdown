@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "New Computer Science Degree For Toddlers Paves Way For Six-Digit Salaries"
+categories: [satire]
+---
+
+SAN JOSE, CA — There’s a new unicorn on the block. Trailblazing e-learning start-up Bots4Tots was valued at a hefty $2.3 billion after raising $150 million in its most recent round of funding. Their product? A tailor-made two-year computer science degree for toddlers.
+
+Demand for the program has been insatiable ever since Bots4Tots Academy welcomed their first class of 529 toddlers last fall. Even then, parents from San Francisco to New York City—but nowhere in between—jostled for any available seat they could find.
+
+The Academy’s goal is to “nurture the next generation of big tech grunts.” To graduate, a toddler must brave a rigorous and punishing curriculum. The Bots4Tots website boasts a plan of study that “covers at least as much as the typical undergraduate computer science degree, which, as it happens, isn’t even that much, since college students aren’t learning anything these days except for how to whine and complain.”
+
+Bots4Tots founder and CEO Robert Monroe was a computer science major “back in the good old days of honest work and firm handshakes.” He wistfully recalls an era when instructors had no scruples about assigning 50-hour problem sets, handing out Fs as motivation, or mocking students in front of their peers for giving the wrong answers to trick questions.
+
+Under Monroe’s guidance, the Academy has revived these vibrant learning environments of the past. “We will continually push our students to the brink of mental collapse—emphasis on ‘brink’—so they can be conditioned from an early age to maximize their productivity,” he stated.
+
+The Bots4Tots brain trust also hopes that their legions of tireless software-savvy graduates can help rehabilitate the image of America’s tech industry. Monroe himself lamented that big tech has gotten a bad rap in recent years, being portrayed as a place with a favorable work-life balance, generous employee benefits, and even time to take breaks from work to play ping-pong.
+
+“They’ve become soft and, frankly, un-American. Employees should be grateful for the bountiful corporations who’ve deigned to pay them,” Monroe asserted. “Academy graduates will have internalized this idea. After all, what’s the point of education if not to mass-produce the proverbial cog in the machine?”
+
+Parents are all for it. In their eyes, the Academy presents a rare opportunity to take a concrete step in securing their children’s futures.
+
+Jackson Rice is one of these parents. “When I was a child,” he recalled, “my parents sang the praises of a so-called ‘liberal arts education.’ I heeded their advice, only to learn that it was nothing but a treacherous pile of fool’s gold.”
+
+He looks back on his college years with painful regret. “While I was moldering away in my room reading great works of world literature, my peers were taking their twenty-fifth computer science class,” Rice sighed. “Though I was a CS major, you can imagine which students were landing the most lucrative jobs. I had to settle for a $60,000 salary after graduating.”
+
+Rice said he has already arranged the first twenty-two years of his son’s life: after Bots4Tots Academy will be fifteen years of five-hour-a-day tutoring (twelve hours on the weekends) till the end of high school, followed by at least forty advanced computer science courses at a top ten university. He is confident that adherence to this plan will mold his son into a reasonably competitive applicant two decades down the road.
+
+“I’ve talked to other parents in my network, and they’ve gone even further,” he revealed. “These days, some want their children to intern at heavy hitters like Google or Microsoft before starting kindergarten. I would never do that to my child. All that pressure could break him.”
+
+Rice pays just under $80,000 a year in tuition, a figure that has sparked much controversy lately. Critics maintain that the Academy only serves the well-off, expanding the yawning chasm between rich and poor. Monroe dismissed such concerns: “All Academy graduates will end up with six-digit salaries. It pays for itself. Take out a loan if you need to. And, come on, we’re a business, so we have to profit. Rich people have money by definition, so of course we’ll inevitably cater to them.”
+
+Monroe might need the money. Though Bots4Tots was the first mover in the pre-preschool computer science education industry, competitors are fast emerging. Overflows4Embryos, for example, is building technology that can teach embryos how to code via ultrasound transmissions.
+
+“We might have another child just to try that out,” laughed Rice. “Starting their education at -8 months old is something I never even dreamed of being possible. Their employability would be off the charts.”
